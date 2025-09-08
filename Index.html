@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="My personal portfolio website with projects, academics, and favourites." />
+  <meta name="author" content="Faiz Aljaber" />
+  <title>Faiz Aljaber — Portfolio</title>
+
+  <link rel="icon" type="image/x-icon" href="img/team/favicon.ico" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles -->
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+  <!-- Navigation (always dark so links are visible) -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" aria-label="Main Navigation">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger d-flex align-items-center gap-2" href="#page-top">
+        <img src="img/team/navbar-logo.svg" alt="" width="28" height="28" />
+        <span>Faiz Aljaber</span>
+      </a>
+
+      <div class="d-flex align-items-center gap-2 order-lg-2">
+        <button class="btn btn-sm btn-outline-light rounded-pill" id="themeToggle"
+          aria-label="Toggle dark mode">🌙</button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <div class="collapse navbar-collapse order-lg-1" id="navbarResponsive">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#favourites">Favourites</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header / Hero -->
+  <header class="masthead text-white text-center" style="background-image: url('img/team/header-bg.jpg');">
+    <div class="overlay"></div>
+    <div class="container d-flex flex-column align-items-center justify-content-center">
+      <p class="badge rounded-pill bg-warning text-dark mb-3">Open to internships & freelance</p>
+      <h1 class="masthead-heading text-uppercase mb-3">Hello, I'm <span class="gradient-text">Faiz Aljaber</span></h1>
+      <p class="masthead-subheading mb-4">Web Developer · Java - Spring Boot Backend</p>
+      <a href="#portfolio" class="btn btn-lg btn-light text-dark rounded-pill px-4 js-scroll-trigger">See my work</a>
+    </div>
+  </header>
+
+  <!-- About (Agency-style timeline) -->
+  <section class="page-section" id="about" aria-labelledby="about-title">
+    <div class="container">
+      <div class="text-center">
+        <h2 id="about-title" class="section-heading text-uppercase">About</h2>
+        <p class="section-subheading text-muted">Academic journey & coding story</p>
+      </div>
+
+      <ul class="timeline">
+        <!-- Item 1 -->
+        <li>
+          <div class="timeline-image">
+            <img class="img-fluid" src="img/about/1.jpg" alt="Beginnings: learning the basics" loading="lazy" />
+          </div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4>Year 1</h4>
+              <h4 class="subheading">Foundations</h4>
+            </div>
+            <div class="timeline-body">
+              <p class="text-muted">
+                Began my BSc at the University of Debrecen. Built a strong base in programming and
+                software development fundamentals: problem-solving, version control, code style, and testing basics.
+              </p>
+            </div>
+        </li>
+
+        <!-- Item 2 (inverted) -->
+        <li class="timeline-inverted">
+          <div class="timeline-image">
+            <img class="rounded-circle img-fluid" src="img/about/2.jpg" alt="Team projects and web apps"
+              loading="lazy" />
+          </div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4>Year 2</h4>
+              <h4 class="subheading">Algorithms & Data Structures</h4>
+            </div>
+            <div class="timeline-body">
+              <p class="text-muted">
+                Dived deep into core CS topics—time/space complexity, arrays, linked lists, stacks, queues, trees,
+                graphs,
+                sorting and searching. Practiced writing efficient, readable solutions to real problems.
+              </p>
+            </div>
+          </div>
+        </li>
+
+        <!-- Item 3 -->
+        <li>
+          <div class="timeline-image">
+            <img class="rounded-circle img-fluid" src="img/about/3.jpg" alt="Specializing in backend & APIs"
+              loading="lazy" />
+          </div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4>Year 3</h4>
+              <h4 class="subheading">Databases & Java Development</h4>
+              <div class="timeline-body">
+                <p class="text-muted">
+                  Focused on database programming and backend design: SQL/ER modeling, transactions, indexing, and
+                  normalization.
+                  Built CRUD apps in Java with JDBC/JPA and unit tests to validate data access and business logic.
+                </p>
+              </div>
+            </div>
+        </li>
+
+        <!-- Item 4 (inverted) -->
+        <li class="timeline-inverted">
+          <div class="timeline-image">
+            <img class="rounded-circle img-fluid" src="img/about/4.jpg" alt="Always learning and building"
+              loading="lazy" />
+          </div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4>Today</h4>
+              <h4 class="subheading">Spring Boot & Practical Software Dev</h4>
+            </div>
+            <p class="text-muted">
+              Building RESTful services with Spring Boot: controllers, services, repositories, and layered architecture.
+              Applying security, validation, and documentation, and shipping small projects that reflect real-world
+              workflows.
+            </p>
+          </div>
+        </li>
+
+        <!-- Callout -->
+        <li class="timeline-inverted">
+          <div class="timeline-image timeline-cta">
+            <h4>
+              Be Part<br />
+              Of My<br />
+              Story!
+            </h4>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="page-section" id="services" aria-labelledby="services-title">
+    <div class="container">
+      <div class="text-center">
+        <h2 id="services-title" class="section-heading text-uppercase">Services & Skills</h2>
+        <p class="section-subheading text-muted">What I can do for you</p>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card service-card h-100">
+            <div class="card-body text-center">
+              <div class="service-emoji">💻</div>
+              <h4 class="my-3">Web Development</h4>
+              <p class="text-muted">
+                Responsive websites with HTML, CSS, JavaScript, and Bootstrap.
+                Built with performance, accessibility, and mobile-first design in mind.
+              </p>
+              <div class="tech-badges">
+                <span class="badge bg-secondary">HTML</span>
+                <span class="badge bg-secondary">CSS</span>
+                <span class="badge bg-secondary">JS</span>
+                <span class="badge bg-secondary">Bootstrap</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card service-card h-100">
+            <div class="card-body text-center">
+              <div class="service-emoji">🛠️</div>
+              <h4 class="my-3">Backend & DB</h4>
+              <p class="text-muted">
+                Experience with Java & Spring Boot for REST APIs, plus database programming.
+                Skilled in SQL (PostgreSQL) and basics of NoSQL (MongoDB).
+              </p>
+              <div class="tech-badges">
+                <span class="badge bg-secondary">Java</span>
+                <span class="badge bg-secondary">Spring Boot</span>
+                <span class="badge bg-secondary">PostgreSQL</span>
+                <span class="badge bg-secondary">MongoDB</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card service-card h-100">
+            <div class="card-body text-center">
+              <div class="service-emoji">🎨</div>
+              <h4 class="my-3">Software Development</h4>
+              <p class="text-muted">
+                Strong foundation in algorithms, data structures, and software engineering fundamentals.
+                Focused on writing clean, maintainable, and tested code in collaborative projects.
+              </p>
+              <div class="tech-badges">
+                <span class="badge bg-secondary">Algorithms</span>
+                <span class="badge bg-secondary">Data Structures</span>
+                <span class="badge bg-secondary">Git</span>
+                <span class="badge bg-secondary">OOP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+<!-- Portfolio (Grid + Modals) -->
+<section class="page-section bg-light" id="portfolio" aria-labelledby="portfolio-title">
+  <div class="container">
+    <div class="text-center">
+      <h2 id="portfolio-title" class="section-heading text-uppercase">Portfolio</h2>
+      <p class="section-subheading text-muted">Selected coding projects</p>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- ITEM 1: Student Management -->
+      <div class="col-lg-4 col-sm-6">
+        <a class="portfolio-link" data-bs-toggle="modal" href="#project1Modal">
+          <div class="portfolio-hover"></div>
+          <img class="img-fluid portfolio-item" src="img/portfolio/01-thumbnail.jpg" alt="Student Management System" loading="lazy" />
+        </a>
+        <h4 class="mt-3">Student Management System</h4>
+        <p class="text-muted">Full-stack app with Spring Boot + PostgreSQL.</p>
+      </div>
+
+      <!-- ITEM 2: Melodic Match -->
+      <div class="col-lg-4 col-sm-6">
+        <a class="portfolio-link" data-bs-toggle="modal" href="#project2Modal">
+          <div class="portfolio-hover"></div>
+          <img class="img-fluid portfolio-item" src="img/portfolio/02-thumbnail.jpg" alt="Melodic Match" loading="lazy" />
+        </a>
+        <h4 class="mt-3">Melodic Match</h4>
+        <p class="text-muted">Music collab platform with Angular + Spring Boot.</p>
+      </div>
+
+      <!-- ITEM 3: AI Task Engine -->
+      <div class="col-lg-4 col-sm-6">
+        <a class="portfolio-link" data-bs-toggle="modal" href="#project3Modal">
+          <div class="portfolio-hover"></div>
+          <img class="img-fluid portfolio-item" src="img/portfolio/03-thumbnail.jpg" alt="AI Task Engine" loading="lazy" />
+        </a>
+        <h4 class="mt-3">AI Task Prioritization Engine</h4>
+        <p class="text-muted">LLM-powered productivity app.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- Favourites -->
+<section class="page-section" id="favourites" aria-labelledby="favourites-title">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 id="favourites-title" class="section-heading text-uppercase">My Favourites</h2>
+      <p class="section-subheading text-muted">Things that keep me inspired and energized</p>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- Sports -->
+      <div class="col-md-4">
+        <div class="card fav-card h-100 shadow-sm border-0 rounded-3 text-center p-4">
+          <div class="fav-icon mb-3">
+            <i class="fas fa-futbol fa-3x text-primary"></i>
+          </div>
+          <h4 class="fw-bold">Sports</h4>
+          <p class="text-muted">
+            Football & cricket weekends with friends — nothing beats the energy of the game!
+          </p>
+        </div>
+      </div>
+
+      <!-- Food -->
+      <div class="col-md-4">
+        <div class="card fav-card h-100 shadow-sm border-0 rounded-3 text-center p-4">
+          <div class="fav-icon mb-3">
+            <i class="fas fa-pizza-slice fa-3x text-danger"></i>
+          </div>
+          <h4 class="fw-bold">Food</h4>
+          <p class="text-muted">
+            Street food adventures 🍜, late-night pizza, and anything spicy 🌶️ keep me going.
+          </p>
+        </div>
+      </div>
+
+      <!-- Music -->
+      <div class="col-md-4">
+        <div class="card fav-card h-100 shadow-sm border-0 rounded-3 text-center p-4">
+          <div class="fav-icon mb-3">
+            <i class="fas fa-music fa-3x text-success"></i>
+          </div>
+          <h4 class="fw-bold">Music</h4>
+          <p class="text-muted">
+            Lo-Fi playlists on repeat while coding, and classical tunes to reset my focus.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- Contact (Formspree) -->
+  <section class="page-section bg-light" id="contact" aria-labelledby="contact-title">
+    <div class="container">
+      <div class="text-center">
+        <h2 id="contact-title" class="section-heading text-uppercase">Contact Me</h2>
+        <p class="section-subheading text-muted">I’d love to hear from you</p>
+      </div>
+
+      <form action="https://formspree.io/f/mgvlrrnl" method="POST" class="needs-validation" novalidate>
+        <div class="row g-4 mb-4">
+          <div class="col-md-6">
+            <label class="form-label" for="name">Your Name</label>
+            <input class="form-control" id="name" type="text" name="name" placeholder="Jane Doe" required />
+            <div class="invalid-feedback">Please enter your name.</div>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label" for="email">Your Email</label>
+            <input class="form-control" id="email" type="email" name="email" placeholder="jane@email.com" required />
+            <div class="invalid-feedback">Please enter a valid email.</div>
+          </div>
+          <div class="col-12">
+            <label class="form-label" for="message">Message</label>
+            <textarea class="form-control" id="message" name="message" rows="6" placeholder="Your message…"
+              required></textarea>
+            <div class="invalid-feedback">Please write a message.</div>
+          </div>
+        </div>
+
+        <!-- Honeypot -->
+        <input type="text" name="_gotcha" style="display:none" />
+        <!-- Redirect to thanks.html on success -->
+        <input type="hidden" name="_redirect" value="thanks.html" />
+
+        <div class="text-center">
+          <button class="btn btn-primary btn-xl rounded-pill" type="submit">Send Message</button>
+        </div>
+      </form>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer py-4">
+    <div class="container text-center">
+      <small>© <span id="year"></span> Faiz Aljaber • Built with Bootstrap</small>
+    </div>
+  </footer>
+
+  <!-- Back-to-top -->
+  <button id="backToTop" class="btn btn-dark rounded-circle" aria-label="Back to top">↑</button>
+
+<!-- Portfolio Modals (Descriptions only) -->
+
+<!-- Project 1: Student Management -->
+<div class="modal fade" id="project1Modal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <button type="button" class="btn-close ms-auto me-2 mt-2" data-bs-dismiss="modal"></button>
+      <div class="modal-body p-0">
+        <img src="img/portfolio/01-full.jpg" class="img-fluid w-100" alt="Student Management System full image" loading="lazy">
+        <div class="p-4">
+          <h3>Student Management System</h3>
+          <p class="text-muted">
+            A full-stack web application for managing students, courses, and grades.  
+            Built with <strong>Java Spring Boot</strong> and <strong>PostgreSQL</strong>, featuring authentication, CRUD operations, and a clean MVC architecture.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Project 2: Melodic Match -->
+<div class="modal fade" id="project2Modal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <button type="button" class="btn-close ms-auto me-2 mt-2" data-bs-dismiss="modal"></button>
+      <div class="modal-body p-0">
+        <img src="img/portfolio/02-full.jpg" class="img-fluid w-100" alt="Melodic Match full image" loading="lazy">
+        <div class="p-4">
+          <h3>Melodic Match</h3>
+          <p class="text-muted">
+            A collaborative platform for composers and musicians.  
+            Developed with a <strong>Spring Boot REST API</strong> and a responsive <strong>Angular front end</strong>, deployed with CI/CD pipelines for scalability.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Project 3: AI Task Prioritization Engine -->
+<div class="modal fade" id="project3Modal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <button type="button" class="btn-close ms-auto me-2 mt-2" data-bs-dismiss="modal"></button>
+      <div class="modal-body p-0">
+        <img src="img/portfolio/03-full.jpg" class="img-fluid w-100" alt="AI Task Engine full image" loading="lazy">
+        <div class="p-4">
+          <h3>AI Task Prioritization Engine</h3>
+          <p class="text-muted">
+            An intelligent task manager that uses <strong>OpenRouter’s LLM API</strong> to prioritize tasks dynamically.  
+            Designed with a clean, responsive UI that improved productivity by 25% in testing.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- jQuery + Easing for smooth scroll -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom scripts -->
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>

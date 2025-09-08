@@ -1,0 +1,374 @@
+/* ============ Theme Tokens ============ */
+:root {
+  --bg: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --primary: #0d6efd;
+  --dark: #0b0b0b;
+  --accent: #ffc107;
+  --card: #ffffff;
+  --border: #e5e7eb;
+  --section-bg: #f6f7f9; /* section background for light */
+}
+
+html[data-theme="dark"] {
+  --bg: #0f1115;
+  --text: #e5e7eb;
+  --muted: #a1a1aa;
+  --primary: #60a5fa;
+  --dark: #000000;
+  --accent: #facc15;
+  --card: #151821;
+  --border: #262b36;
+  --section-bg: #121623; /* section background for dark */
+}
+
+/* ============ Base ============ */
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.65;
+}
+a { color: inherit; text-decoration: none; }
+.img-fluid { border-radius: 12px; }
+
+/* ============ Navbar (always dark) ============ */
+#mainNav {
+  background: rgba(0,0,0,.85);
+  box-shadow: 0 8px 28px rgba(0,0,0,.25);
+  transition: background-color .25s ease, box-shadow .25s ease;
+}
+#mainNav.navbar-shrink {
+  background: rgba(0,0,0,.92);
+  box-shadow: 0 10px 36px rgba(0,0,0,.35);
+}
+#mainNav .nav-link { color: #f8f9fa; }
+#mainNav .nav-link.active, #mainNav .nav-link:hover { color: var(--accent); }
+
+/* ============ Hero ============ */
+.masthead {
+  position: relative;
+  min-height: 88vh;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #fff;
+}
+.masthead .overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.55));
+}
+.masthead .container { position: relative; z-index: 1; }
+.masthead-heading { font-size: clamp(2rem, 3vw + 1rem, 3.2rem); font-weight: 800; }
+.masthead-subheading { font-size: clamp(1rem, 1.2vw + .5rem, 1.3rem); color: #f3f4f6; }
+.gradient-text { background: linear-gradient(90deg, #fff, #ddd, #fff); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+/* ============ Sections ============ */
+.page-section { padding: 6rem 0; }
+.bg-light { background: var(--section-bg) !important; }
+.section-heading { font-weight: 800; letter-spacing: .5px; }
+.section-subheading { color: var(--muted); margin-top: .25rem; }
+
+/* ============ Timeline (About) ============ */
+.timeline { border-left: 2px solid var(--border); padding-left: 1.25rem; }
+.timeline-item { margin-bottom: 1rem; }
+.timeline-item h5 { margin-bottom: .25rem; }
+
+/* ============ Services ============ */
+.service-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(0,0,0,.06);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.service-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(0,0,0,.12); }
+.service-emoji { font-size: 2rem; }
+.tech-badges .badge { margin: .25rem; }
+
+/* ============ Portfolio ============ */
+.portfolio-link { position: relative; display: block; border-radius: 12px; overflow: hidden; }
+.portfolio-hover {
+  position: absolute; inset: 0; background: rgba(0,0,0,.15);
+  opacity: 0; transition: opacity .2s ease;
+}
+.portfolio-link:hover .portfolio-hover { opacity: 1; }
+.portfolio-item { transition: transform .25s ease; }
+.portfolio-link:hover .portfolio-item { transform: scale(1.03); }
+#portfolio h4 { margin-top: .85rem; }
+
+/* ============ Favourites ============ */
+.fav-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.fav-card:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(0,0,0,.1); }
+.fav-emoji { font-size: 2rem; }
+
+/* ============ Contact ============ */
+#contact .form-control {
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+}
+#contact .form-control:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 .2rem rgba(13,110,253,.2);
+}
+.btn-primary {
+  background: var(--dark);
+  border: none;
+  border-radius: 999px;
+  padding: .85rem 1.5rem;
+}
+.btn-primary:hover { background: var(--accent); color: #000; }
+
+/* ============ Footer ============ */
+.footer { background: var(--dark); color: #fff; text-align: center; }
+
+/* ============ Back to top ============ */
+#backToTop {
+  position: fixed; right: 16px; bottom: 16px;
+  width: 44px; height: 44px; display: grid; place-items: center;
+  opacity: 0; visibility: hidden; transform: translateY(8px);
+  transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
+  z-index: 1030;
+}
+#backToTop.show { opacity: 1; visibility: visible; transform: translateY(0); }
+
+/* ============ Responsive ============ */
+@media (max-width: 991.98px) {
+  .page-section { padding: 4.5rem 0; }
+}
+
+/* === Agency-style timeline (Bootstrap 5, dark-mode aware) === */
+.timeline {
+  position: relative;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--border);
+  left: 40px;
+  margin-left: -1px;
+}
+
+.timeline > li {
+  position: relative;
+  min-height: 80px;
+  margin-bottom: 50px;
+}
+
+.timeline > li .timeline-image {
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  border: 7px solid var(--section-bg);
+  border-radius: 50%;
+  background: var(--card);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 0;
+}
+
+.timeline > li .timeline-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.timeline > li .timeline-panel {
+  position: relative;
+  width: calc(100% - 120px);
+  float: right;
+  padding: 20px 25px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.06);
+}
+
+.timeline > li .timeline-panel .timeline-heading h4 {
+  margin-top: 0;
+  margin-bottom: .25rem;
+  font-weight: 700;
+}
+
+.timeline > li .timeline-panel .timeline-heading .subheading {
+  font-weight: 600;
+  margin-bottom: .5rem;
+}
+
+.timeline > li .timeline-panel .timeline-body .text-muted {
+  margin-bottom: 0;
+}
+
+/* inverted item */
+.timeline > li.timeline-inverted > .timeline-panel {
+  float: left;
+}
+
+/* call-to-action bubble */
+.timeline-cta {
+  display: grid;
+  place-items: center;
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+.timeline-cta h4 {
+  color: #fff;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* responsive tweaks */
+@media (min-width: 992px) {
+  .timeline::before { left: 50%; }
+  .timeline > li { min-height: 120px; }
+  .timeline > li .timeline-image {
+    left: 50%;
+    width: 100px; height: 100px;
+    margin-left: -50px;
+  }
+  .timeline > li .timeline-panel {
+    width: 41%;
+    float: left;
+  }
+  .timeline > li.timeline-inverted > .timeline-panel {
+    float: right;
+  }
+}
+
+/* === SIZE TUNE: Agency-style timeline scale === */
+
+/* Section title + subheading (smaller like the demo) */
+#about .section-heading {
+  font-size: clamp(1.75rem, 2vw + 1rem, 2.25rem);
+  letter-spacing: .5px;
+}
+#about .section-subheading {
+  font-size: clamp(.95rem, .6vw + .7rem, 1.05rem);
+}
+
+/* Vertical line thinner + softer */
+#about .timeline::before {
+  width: 1.5px;
+  background-color: rgba(0,0,0,.12);
+}
+html[data-theme="dark"] #about .timeline::before {
+  background-color: rgba(255,255,255,.12);
+}
+
+/* Circles smaller */
+#about .timeline > li .timeline-image {
+  width: 72px;
+  height: 72px;
+  border-width: 6px;
+}
+
+/* Card narrower paddings and spacing */
+#about .timeline > li {
+  margin-bottom: 36px;
+}
+#about .timeline > li .timeline-panel {
+  padding: 16px 18px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.05);
+}
+
+/* Typography scale inside cards:
+   - Small uppercase date
+   - Bold subheading
+   - Muted body a touch smaller
+*/
+#about .timeline .timeline-heading h4:first-child {
+  font-size: .9rem;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: .15rem;
+}
+#about .timeline .timeline-heading .subheading {
+  font-size: clamp(1rem, .7vw + .8rem, 1.25rem);
+  font-weight: 700;
+  margin-bottom: .5rem;
+}
+#about .timeline .timeline-body .text-muted {
+  font-size: .98rem;
+  line-height: 1.6;
+}
+
+/* CTA bubble size like demo */
+#about .timeline-cta {
+  width: 72px;
+  height: 72px;
+  border-width: 6px;
+}
+#about .timeline-cta h4 {
+  font-size: 12px;
+  line-height: 1.15;
+}
+
+/* Desktop layout mirrors Agency sizing */
+@media (min-width: 992px) {
+  #about .timeline > li { min-height: 110px; }
+  #about .timeline > li .timeline-image {
+    width: 88px;
+    height: 88px;
+    margin-left: -44px; /* keeps it centered on the line */
+  }
+  #about .timeline > li .timeline-panel {
+    width: 42%;
+    padding: 18px 22px;
+  }
+  #about .timeline .timeline-heading .subheading {
+    font-size: 1.15rem;
+  }
+}
+
+/* --- Force small circular avatars in About timeline --- */
+#about .timeline-image {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 6px solid var(--section-bg);
+  background: var(--card);
+  display: grid;
+  place-items: center;
+}
+
+#about .timeline-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* prevent any inherited rounding that creates ellipses */
+  border-radius: 0 !important;
+  display: block;
+}
+
+/* Optional: tighten spacing a bit more */
+#about .timeline > li { margin-bottom: 36px; }
+#about .timeline::before { width: 2px; }
